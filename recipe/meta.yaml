@@ -9,18 +9,17 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - papermill = papermill.cli:papermill
   
 requirements:
-  build:
+  home:
     - python
     - pip >=9.0.1
 
