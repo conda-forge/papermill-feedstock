@@ -1,26 +1,25 @@
 {% set name = "papermill" %}
-{% set version = "0.13.4" %}
+{% set version = "0.14.2" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "29ee5bc4c2be72bda88271ab96400f1844c1ae71840eb3a28b49a5268a4cbbf5" %}
+{% set hash = "60a282ffdcc14ae427a85a12fbd856885716010ef691066f2f1957e5904be52d" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: python -m pip install --no-deps --ignore-installed --no-cache-dir -vvv .
   entry_points:
     - papermill = papermill.cli:papermill
   
 requirements:
-  build:
+  home:
     - python
     - pip >=9.0.1
 
