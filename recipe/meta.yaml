@@ -19,7 +19,7 @@ build:
     - papermill = papermill.cli:papermill
   
 requirements:
-  home:
+  host:
     - python
     - pip >=9.0.1
 
