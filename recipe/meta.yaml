@@ -1,8 +1,8 @@
 {% set name = "papermill" %}
-{% set version = "0.14.2" %}
+{% set version = "0.16.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "60a282ffdcc14ae427a85a12fbd856885716010ef691066f2f1957e5904be52d" %}
+{% set hash = "6bb4735c1187cb9bd3598bf9395b07ad690128e2ffbcb5d6ef248de160acada9" %}
 
 package:
   name: {{ name|lower }}
