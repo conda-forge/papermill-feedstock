@@ -1,5 +1,5 @@
 {% set name = "papermill" %}
-{% set version = "0.14.2" %}
+{% set version = "0.19.0" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "60a282ffdcc14ae427a85a12fbd856885716010ef691066f2f1957e5904be52d" %}
@@ -13,11 +13,11 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1000
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - papermill = papermill.cli:papermill
-  
+
 requirements:
   host:
     - python
@@ -25,26 +25,14 @@ requirements:
 
   run:
     - python
-    - ansiwrap
-    - boto3
-    - click
-    - future
-    - futures  # [py2k]
-    - ipython >=5.0
-    - pyyaml
-    - nbformat
-    - nbconvert
-    - six
-    - tqdm
-    - jupyter_client
-    - pandas
-    - requests
+    - virtualenv >=1.11.2
 
 test:
   imports:
-    - papermill
+    - tox
+
   commands:
-    - papermill --help
+    - tox -e py{{ environ.get('PY_VER').replace('.', '') }}
 
 about:
   home: https://github.com/nteract/papermill
@@ -57,4 +45,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - pmlandwehr
+    - mseal
