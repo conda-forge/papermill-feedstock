@@ -38,7 +38,6 @@ test:
     - check-manifest
     - black
     - attrs>=17.4.0
-    - pre-commit
     - boto3
     - botocore
     - ipywidgets
@@ -49,7 +48,6 @@ test:
     - wheel>=0.31.0
     - setuptools>=38.6.0
     - twine>=1.11.0
-    - google_compute_engine
   imports:
     - papermill
 
