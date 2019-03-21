@@ -1,30 +1,42 @@
+{% set version = "0.19.0" %}
+
 package:
   name: "papermill"
-  version: "0.19.0"
+  version: {{ version }}
 
 source:
-  url: https://pypi.org/project/papermill-0.19.0.tar.gz
+  url: https://pypi.org/project/papermill-{{ version }}.tar.gz
   sha256: d62d7edcb635040a84ccf42b6dcc7e9163a8945059c8eee5211218f56d8f3904
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
+
 
 requirements:
   host:
     - python
     - pip
+    - ansiwrap
+    - boto3
+    - click
+    - future
+    - futures  # [py2k]
+    - ipython >=5.0
+    - pyyaml
+    - nbformat
+    - nbconvert
+    - six
+    - tqdm
+    - jupyter_client
+    - pandas
+    - requests
   run:
     - python
 
 test:
   imports:
     - papermill
-    - papermill.tests
-  requires:
-    - pytest
-  commands:
-    - py.test --pyargs papermill
 
 about:
   home: http://github.com/nteract/papermill
