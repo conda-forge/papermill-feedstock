@@ -36,7 +36,7 @@ test:
     - pytest-env>=0.6.2
     - moto
     - check-manifest
-    - black; python_version >= '3.6'
+    - black
     - attrs>=17.4.0
     - pre-commit
     - boto3
