@@ -1,40 +1,55 @@
+{% set name = "papermill" %}
 {% set version = "0.19.0" %}
+{% set sha256 = "d62d7edcb635040a84ccf42b6dcc7e9163a8945059c8eee5211218f56d8f3904" %}
 
 package:
-  name: "papermill"
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/project/papermill-{{ version }}.tar.gz
-  sha256: d62d7edcb635040a84ccf42b6dcc7e9163a8945059c8eee5211218f56d8f3904
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
+  noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
-
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   host:
     - python
     - pip
-    - ansiwrap
-    - boto3
-    - click
-    - future
-    - futures  # [py2k]
-    - ipython >=5.0
-    - pyyaml
-    - nbformat
-    - nbconvert
-    - six
-    - tqdm
-    - jupyter_client
-    - pandas
-    - requests
+    - setuptools
   run:
     - python
 
 test:
+  requires:
+    - codecov
+    - coverage
+    - notebook
+    - mock
+    - pytest>=4.1
+    - pytest-cov>=2.6.1
+    - pytest-mock>=1.10
+    - pytest-env>=0.6.2
+    - moto
+    - check-manifest
+    - black; python_version >= '3.6'
+    - attrs>=17.4.0
+    - pre-commit
+    - boto3
+    - botocore
+    - ipywidgets
+    - flake8
+    - tox
+    - bumpversion
+    - pip>=18.1
+    - wheel>=0.31.0
+    - setuptools>=38.6.0
+    - twine>=1.11.0
+    - google_compute_engine
   imports:
     - papermill
 
