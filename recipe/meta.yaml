@@ -18,7 +18,6 @@ requirements:
   host:
     - pip
     - python
-    - setuptools
   run:
     - ansiwrap
     - backports.tempfile
@@ -31,6 +30,7 @@ requirements:
     - nbconvert >=5.4
     - nbformat
     - pandas
+    - pip
     - python
     - pyyaml
     - requests
