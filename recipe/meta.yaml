@@ -1,55 +1,64 @@
 {% set name = "papermill" %}
 {% set version = "0.19.0" %}
-{% set sha256 = "d62d7edcb635040a84ccf42b6dcc7e9163a8945059c8eee5211218f56d8f3904" %}
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: d62d7edcb635040a84ccf42b6dcc7e9163a8945059c8eee5211218f56d8f3904
 
 build:
-  noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  entry_points:
+    - papermill = papermill.cli:papermill
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
 requirements:
   host:
-    - python
+    - ansiwrap
+    - backports.tempfile
+    - click
+    - entrypoints
+    - future
+    - futures
+    - ipython >=5.0
+    - jupyter_client
+    - nbconvert >=5.4
+    - nbformat
+    - pandas
     - pip
-    - setuptools
-  run:
     - python
+    - pyyaml
+    - requests
+    - retry
+    - six
+    - tqdm >=4.29.1
+  run:
+    - ansiwrap
+    - backports.tempfile
+    - click
+    - entrypoints
+    - future
+    - futures
+    - ipython >=5.0
+    - jupyter_client
+    - nbconvert >=5.4
+    - nbformat
+    - pandas
+    - python
+    - pyyaml
+    - requests
+    - retry
+    - six
+    - tqdm >=4.29.1
 
 test:
-  requires:
-    - codecov
-    - coverage
-    - notebook
-    - mock
-    - pytest>=4.1
-    - pytest-cov>=2.6.1
-    - pytest-mock>=1.10
-    - pytest-env>=0.6.2
-    - moto
-    - check-manifest
-    - black
-    - attrs>=17.4.0
-    - boto3
-    - botocore
-    - ipywidgets
-    - flake8
-    - tox
-    - bumpversion
-    - pip>=18.1
-    - wheel>=0.31.0
-    - setuptools>=38.6.0
-    - twine>=1.11.0
   imports:
     - papermill
+  commands:
+    - papermill --help
 
 about:
   home: http://github.com/nteract/papermill
