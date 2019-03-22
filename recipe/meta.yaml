@@ -41,7 +41,7 @@ test:
   imports:
     - papermill
   commands:
-    - papermill --help
+    - python -c "import papermill"
 
 about:
   home: http://github.com/nteract/papermill
