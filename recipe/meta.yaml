@@ -35,8 +35,7 @@ requirements:
     - requests
     - six
     - tqdm >=4.29.1
-    - pip:
-       - retry
+    - pip
 
 test:
   imports:
