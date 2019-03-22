@@ -30,13 +30,13 @@ requirements:
     - nbconvert >=5.4
     - nbformat
     - pandas
-    - pip
     - python
     - pyyaml
     - requests
-    - retry
     - six
     - tqdm >=4.29.1
+    - pip:
+       - retry
 
 test:
   imports:
