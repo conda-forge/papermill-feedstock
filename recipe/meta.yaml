@@ -38,6 +38,24 @@ requirements:
     - pip
 
 test:
+  requires:
+    - ansiwrap
+    - backports.tempfile
+    - click
+    - entrypoints
+    - future
+    - futures
+    - ipython >=5.0
+    - jupyter_client
+    - nbconvert >=5.4
+    - nbformat
+    - pandas
+    - python
+    - pyyaml
+    - requests
+    - six
+    - tqdm >=4.29.1
+    - pip
   imports:
     - papermill
   commands:
