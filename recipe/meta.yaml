@@ -22,7 +22,7 @@ requirements:
     - click
     - entrypoints
     - future
-    - futures # [py2k]
+    - futures  # [py2k]
     - ipython >=5.0
     - jupyter_client
     - nbconvert >=5.4
@@ -41,7 +41,7 @@ requirements:
     - click
     - entrypoints
     - future
-    - futures # [py2k]
+    - futures  # [py2k]
     - ipython >=5.0
     - jupyter_client
     - nbconvert >=5.4
