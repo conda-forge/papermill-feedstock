@@ -66,7 +66,7 @@ test:
 about:
   home: http://github.com/nteract/papermill
   license: BSD 3-Clause
-  license_family: BSD
+  license_family: "BSD"
   license_file: LICENSE
   summary: "Papermill is a tool for parameterizing, executing, and analyzing Jupyter Notebooks."
   doc_url: http://papermill.readthedocs.io/en/latest/
