@@ -10,10 +10,7 @@ source:
   sha256: 7c08c1ce99fab7ec797187db54c49a7dcb3ed596816e757e99fa2a8c472ff39c
 
 build:
-  noarch: python
   number: 0
-  entry_points:
-    - papermill = papermill.cli:papermill
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -26,7 +23,6 @@ requirements:
 test:
   imports:
     - papermill
-    - papermill.tests
 
 about:
   home: http://github.com/nteract/papermill
