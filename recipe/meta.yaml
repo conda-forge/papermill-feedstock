@@ -1,44 +1,58 @@
 {% set name = "papermill" %}
-{% set version = "0.14.2" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "60a282ffdcc14ae427a85a12fbd856885716010ef691066f2f1957e5904be52d" %}
+{% set version = "0.19.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 7c08c1ce99fab7ec797187db54c49a7dcb3ed596816e757e99fa2a8c472ff39c
 
 build:
-  number: 1000
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
   entry_points:
     - papermill = papermill.cli:papermill
-  
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+
 requirements:
   host:
-    - python
-    - pip >=9.0.1
-
-  run:
-    - python
     - ansiwrap
-    - boto3
+    - backports.tempfile
     - click
+    - entrypoints
     - future
     - futures  # [py2k]
     - ipython >=5.0
-    - pyyaml
-    - nbformat
-    - nbconvert
-    - six
-    - tqdm
     - jupyter_client
+    - nbconvert >=5.4
+    - nbformat
     - pandas
+    - pip
+    - python
+    - pyyaml
     - requests
+    - six
+    - tenacity
+    - tqdm >=4.29.1
+  run:
+    - ansiwrap
+    - backports.tempfile
+    - click
+    - entrypoints
+    - future
+    - futures  # [py2k]
+    - ipython >=5.0
+    - jupyter_client
+    - nbconvert >=5.4
+    - nbformat
+    - pandas
+    - python
+    - pyyaml
+    - requests
+    - six
+    - tenacity
+    - tqdm >=4.29.1
 
 test:
   imports:
@@ -47,14 +61,15 @@ test:
     - papermill --help
 
 about:
-  home: https://github.com/nteract/papermill
-  license_file: LICENSE
+  home: http://github.com/nteract/papermill
   license: BSD 3-Clause
   license_family: BSD
-  summary: 'Papermill is a tool for parameterizing, executing, and analyzing Jupyter Notebooks.'
-  doc_url: http://papermill.readthedocs.io/en/latest/
+  license_file: LICENSE
+  summary: "Papermill parameterizes, executes, and analyzes Jupyter Notebooks."
+  doc_url: http://papermill.readthedocs.io/
   dev_url: https://github.com/nteract/papermill
 
 extra:
   recipe-maintainers:
-    - pmlandwehr
+    - MSeal
+    - willingc
