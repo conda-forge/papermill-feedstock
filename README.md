@@ -7,7 +7,7 @@ Package license: BSD 3-Clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: Papermill is a tool for parameterizing, executing, and analyzing Jupyter Notebooks.
+Summary: Papermill parameterizes, executes, and analyzes Jupyter Notebooks.
 
 
 
