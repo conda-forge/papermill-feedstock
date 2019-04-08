@@ -34,6 +34,7 @@ requirements:
     - pyyaml
     - requests
     - six
+    - tenacity
     - tqdm >=4.29.1
     - pip
 
@@ -55,6 +56,7 @@ test:
     - requests
     - six
     - tqdm >=4.29.1
+    - tenacity
     - pip
   imports:
     - papermill
