@@ -11,18 +11,54 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  entry_points:
+    - papermill = papermill.cli:papermill
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
 
 requirements:
   host:
-    - python
+    - ansiwrap
+    - backports.tempfile
+    - click
+    - entrypoints
+    - future
+    - futures
+    - ipython >=5.0
+    - jupyter_client
+    - nbconvert >=5.4
+    - nbformat
+    - pandas
     - pip
-  run:
     - python
+    - pyyaml
+    - requests
+    - six
+    - tenacity
+    - tqdm >=4.29.1
+  run:
+    - ansiwrap
+    - backports.tempfile
+    - click
+    - entrypoints
+    - future
+    - futures
+    - ipython >=5.0
+    - jupyter_client
+    - nbconvert >=5.4
+    - nbformat
+    - pandas
+    - python
+    - pyyaml
+    - requests
+    - six
+    - tenacity
+    - tqdm >=4.29.1
 
 test:
   imports:
     - papermill
+  commands:
+    - papermill --help
 
 about:
   home: http://github.com/nteract/papermill
