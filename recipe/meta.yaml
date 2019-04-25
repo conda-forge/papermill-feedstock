@@ -25,7 +25,7 @@ requirements:
     - futures  # [py2k]
     - ipython >=5.0
     - jupyter_client
-    - nbconvert >=5.4
+    - nbconvert >=5.5
     - nbformat
     - pandas
     - pip
@@ -44,7 +44,7 @@ requirements:
     - futures  # [py2k]
     - ipython >=5.0
     - jupyter_client
-    - nbconvert >=5.4
+    - nbconvert >=5.5
     - nbformat
     - pandas
     - python
