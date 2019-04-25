@@ -1,5 +1,5 @@
 {% set name = "papermill" %}
-{% set version = "0.19.1" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7c08c1ce99fab7ec797187db54c49a7dcb3ed596816e757e99fa2a8c472ff39c
+  sha256: 6b249844d827be10b1dce80c4894b5f98d3d0ba707267c8e4e82f2c16237c93d
 
 build:
   number: 0
