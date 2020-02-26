@@ -10,8 +10,8 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      osx_python2.7:
-        CONFIG: osx_python2.7
+      osx_python3.5:
+        CONFIG: osx_python3.5
         UPLOAD_PACKAGES: True
       osx_python3.6:
         CONFIG: osx_python3.6
@@ -27,7 +27,7 @@ jobs:
   # TODO: Fast finish on azure pipelines?
   - script: |
       echo "Fast Finish"
-      
+
 
   - script: |
       echo "Removing homebrew from Azure to avoid conflicts."

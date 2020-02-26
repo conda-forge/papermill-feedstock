@@ -18,41 +18,32 @@ build:
 requirements:
   host:
     - ansiwrap
-    - backports.tempfile
     - click
     - entrypoints
-    - future
-    - futures  # [py2k]
     - ipython >=5.0
     - jupyter_client
-    - nbconvert >=5.5
+    - nbclient
     - nbformat
-    - pandas
     - pip
     - python
     - pyyaml
     - requests
-    - six
     - tenacity
-    - tqdm >=4.29.1
+    - tqdm >=4.32.2
   run:
     - ansiwrap
-    - backports.tempfile
     - click
     - entrypoints
-    - future
-    - futures  # [py2k]
     - ipython >=5.0
     - jupyter_client
-    - nbconvert >=5.5
+    - nbclient
     - nbformat
-    - pandas
+    - pip
     - python
     - pyyaml
     - requests
-    - six
     - tenacity
-    - tqdm >=4.29.1
+    - tqdm >=4.32.2
 
 test:
   imports:
