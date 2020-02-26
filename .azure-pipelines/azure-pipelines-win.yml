@@ -88,10 +88,6 @@ jobs:
 
     # Special cased version setting some more things!
     - script: |
-      win_python3.6:
-        CONFIG: win_python3.6
-        CONDA_BLD_PATH: D:\\bld\\
-        UPLOAD_PACKAGES: True
         conda.exe build recipe -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe (vs2008)
       env:
