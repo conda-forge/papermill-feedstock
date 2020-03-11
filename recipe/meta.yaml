@@ -42,7 +42,7 @@ requirements:
     - requests
     - tenacity
     - tqdm >=4.32.2
-    - black
+    - black # [not py27]
 
 test:
   imports:
