@@ -10,7 +10,7 @@ source:
   sha256: 83459eeb378b2a2f885fc2b36890306a99fda160d483d28847aa112454311bab
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - papermill = papermill.cli:papermill
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
