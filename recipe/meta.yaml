@@ -36,7 +36,6 @@ requirements:
     - jupyter_client
     - nbclient
     - nbformat
-    - pip
     - python
     - pyyaml
     - requests
