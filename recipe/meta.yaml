@@ -42,6 +42,7 @@ requirements:
     - requests
     - tenacity
     - tqdm >=4.32.2
+    - black
 
 test:
   imports:
