@@ -1,5 +1,5 @@
 {% set name = "papermill" %}
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 83459eeb378b2a2f885fc2b36890306a99fda160d483d28847aa112454311bab
+  sha256: 1ff390a2bea5ea1538c1fcb5e2abb08c2a261d4427286905bc803416c72c26b0
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - papermill = papermill.cli:papermill
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
@@ -22,7 +22,7 @@ requirements:
     - click
     - entrypoints
     - jupyter_client
-    - nbclient
+    - nbclient >=0.2.0
     - nbformat
     - pip
     - python
@@ -30,12 +30,13 @@ requirements:
     - requests
     - tenacity
     - tqdm >=4.32.2
+    - black
   run:
     - ansiwrap
     - click
     - entrypoints
     - jupyter_client
-    - nbclient
+    - nbclient >=0.2.0
     - nbformat
     - pip
     - python
