@@ -1,5 +1,5 @@
 {% set name = "papermill" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1ff390a2bea5ea1538c1fcb5e2abb08c2a261d4427286905bc803416c72c26b0
+  sha256: aadc23f0ae2eaa75868e4359f1ea7d75ff46bc8cb1988651f3f3fd5d4ec44679
 
 build:
   number: 0
   entry_points:
     - papermill = papermill.cli:papermill
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
   skip: true  # [py<35]
 
 requirements:
@@ -57,7 +57,7 @@ about:
   license: BSD 3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "Papermill parameterizes, executes, and analyzes Jupyter Notebooks."
+  summary: Papermill parameterizes, executes, and analyzes Jupyter Notebooks.
   doc_url: http://papermill.readthedocs.io/
   dev_url: https://github.com/nteract/papermill
 
