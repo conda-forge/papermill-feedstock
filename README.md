@@ -5,7 +5,7 @@ Home: http://github.com/nteract/papermill
 
 Package license: BSD 3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Papermill parameterizes, executes, and analyzes Jupyter Notebooks.
 
