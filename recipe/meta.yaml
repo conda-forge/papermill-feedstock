@@ -18,8 +18,7 @@ build:
 
 requirements:
   host:
-    - python  # [python_impl == 'cpython']
-    - python 3.6 *_73_pypy  # [python_impl == 'pypy']
+    - python
     - pip
     - setuptools
     - ansiwrap
@@ -34,8 +33,7 @@ requirements:
     - tqdm >=4.32.2
     - black
   run:
-    - python  # [python_impl == 'cpython']
-    - python 3.6 *_73_pypy  # [python_impl == 'pypy']
+    - python
     - pip
     - ansiwrap
     - click
