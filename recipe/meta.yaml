@@ -14,7 +14,7 @@ build:
   entry_points:
     - papermill = papermill.cli:papermill
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
-  skip: true  # [py<35]
+  skip: true  # [py<35, python_impl == 'pypy']
 
 requirements:
   host:
