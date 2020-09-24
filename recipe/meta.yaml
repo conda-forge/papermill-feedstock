@@ -10,52 +10,41 @@ source:
   sha256: ee7f5df686bd3e0ad1dafc0eb1fe8c3b0e0a7214004b1eea71551af5016679c3
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - papermill = papermill.cli:papermill
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
-  skip: true  # [py<35, python_impl == 'pypy']
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
-    - setuptools
-    - ansiwrap
-    - click
-    - entrypoints
-    - jupyter_client
-    - nbclient >=0.2.0
-    - nbformat
-    - pyyaml
-    - requests
-    - tenacity
-    - tqdm >=4.32.2
-    - black
   run:
-    - python
-    - pip
     - ansiwrap
+    - black
     - click
     - entrypoints
-    - jupyter_client
     - nbclient >=0.2.0
     - nbformat
+    - python >=3.6
     - pyyaml
     - requests
     - tenacity
     - tqdm >=4.32.2
-    - black
 
 test:
   imports:
     - papermill
   commands:
     - papermill --help
+    - pip check
+  requires:
+    - pip
 
 about:
   home: http://github.com/nteract/papermill
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Papermill parameterizes, executes, and analyzes Jupyter Notebooks.
