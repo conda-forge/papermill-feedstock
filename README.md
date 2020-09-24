@@ -3,7 +3,7 @@ About papermill
 
 Home: http://github.com/nteract/papermill
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD-3-Clause
 
@@ -15,7 +15,13 @@ Current build status
 ====================
 
 
-<table>
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=752&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/papermill-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
 </table>
 
 Current release info
