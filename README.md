@@ -5,11 +5,13 @@ Home: http://github.com/nteract/papermill
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/papermill-feedstock/blob/master/LICENSE.txt)
 
 Summary: Papermill parameterizes, executes, and analyzes Jupyter Notebooks.
 
+Development: https://github.com/nteract/papermill
 
+Documentation: http://papermill.readthedocs.io/
 
 Current build status
 ====================
