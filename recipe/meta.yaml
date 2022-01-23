@@ -1,5 +1,5 @@
 {% set name = "papermill" %}
-{% set version = "2.3.3" %}
+{% set version = "2.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 349aecd526c15c39f73a08df836467e2fead877c474d82c7df349f27ad272525
+  sha256: be12d2728989c0ae17b42fcb05b623500004e94b34f56bd153355ccebb84a59a
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - papermill = papermill.cli:papermill
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
