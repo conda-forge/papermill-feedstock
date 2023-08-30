@@ -1,5 +1,5 @@
 {% set name = "papermill" %}
-{% set version = "2.3.4" %}
+{% set version = "2.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: be12d2728989c0ae17b42fcb05b623500004e94b34f56bd153355ccebb84a59a
+  sha256: 6f8f8a9b06b39677f207c09100c8d386bcf592f0cbbdda9f0f50e81445697627
 
 build:
   number: 0
@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
     - ansiwrap
@@ -27,7 +27,7 @@ requirements:
     - entrypoints
     - nbclient >=0.2.0
     - nbformat >=5.1.2
-    - python >=3.6
+    - python >=3.7
     - pyyaml
     - requests
     - tenacity
