@@ -10,7 +10,7 @@ source:
   sha256: 6f8f8a9b06b39677f207c09100c8d386bcf592f0cbbdda9f0f50e81445697627
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - papermill = papermill.cli:papermill
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.7,<3.12
     - pip
   run:
     - ansiwrap
@@ -27,7 +27,7 @@ requirements:
     - entrypoints
     - nbclient >=0.2.0
     - nbformat >=5.1.2
-    - python >=3.7
+    - python >=3.7,<3.12
     - pyyaml
     - requests
     - tenacity
