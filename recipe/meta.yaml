@@ -53,5 +53,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - dhirschfeld
     - MSeal
     - willingc
