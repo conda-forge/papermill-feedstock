@@ -1,13 +1,15 @@
 {% set name = "papermill" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6f8f8a9b06b39677f207c09100c8d386bcf592f0cbbdda9f0f50e81445697627
+  # FIXME: Revert GitHub archive change when sdist is correctly packaged
+  # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/nteract/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 6249841f1de776cf5191b2944cf8fe52a690088be72a3278a23e6bde19dd1541
 
 build:
   number: 0
