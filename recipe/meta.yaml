@@ -9,7 +9,7 @@ source:
   # FIXME: Revert GitHub archive change when sdist is correctly packaged
   # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   url: https://github.com/nteract/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: ea7b70c0553f56fe91b0fa9cc5e17012cd699320a8b015373e7870c5e6086c72
+  sha256: 6249841f1de776cf5191b2944cf8fe52a690088be72a3278a23e6bde19dd1541
 
 build:
   number: 0
