@@ -23,7 +23,7 @@ requirements:
     - python >=3.7
     - pip
   run:
-    - aiohttp >=3.9.2
+    - aiohttp >=3.9
     - click
     - entrypoints
     - nbclient >=0.2.0
@@ -32,6 +32,7 @@ requirements:
     - pyyaml
     - requests
     - tenacity >=5.0.2
+    - tqdm >= 4.32.2
 
 test:
   imports:
