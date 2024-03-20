@@ -32,7 +32,7 @@ requirements:
     - pyyaml
     - requests
     - tenacity >=5.0.2
-    - tqdm >= 4.32.2
+    - tqdm >=4.32.2
 
 test:
   imports:
