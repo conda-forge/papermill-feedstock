@@ -23,8 +23,7 @@ requirements:
     - python >=3.7
     - pip
   run:
-    - ansiwrap
-    - black
+    - aiohttp >=3.9.2
     - click
     - entrypoints
     - nbclient >=0.2.0
@@ -32,8 +31,7 @@ requirements:
     - python >=3.7
     - pyyaml
     - requests
-    - tenacity
-    - tqdm >=4.32.2
+    - tenacity >=5.0.2
 
 test:
   imports:
