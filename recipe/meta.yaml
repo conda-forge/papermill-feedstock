@@ -23,7 +23,7 @@ requirements:
     - python >=3.7
     - pip
   run:
-    - aiohttp >=3.9
+    - aiohttp >=3.9,<3.10
     - click
     - entrypoints
     - nbclient >=0.2.0
