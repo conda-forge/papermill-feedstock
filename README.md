@@ -148,5 +148,6 @@ Feedstock Maintainers
 =====================
 
 * [@MSeal](https://github.com/MSeal/)
+* [@dhirschfeld](https://github.com/dhirschfeld/)
 * [@willingc](https://github.com/willingc/)
 
