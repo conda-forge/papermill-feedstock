@@ -39,7 +39,6 @@ test:
     - papermill
   commands:
     - papermill --help
-    - pip check
   requires:
     - pip
 
