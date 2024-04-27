@@ -23,11 +23,12 @@ requirements:
     - python >=3.7
     - pip
   run:
+    - ansicolors
     - aiohttp >=3.9,<3.10
     - click
     - entrypoints
     - nbclient >=0.2.0
-    - nbformat >=5.1.2
+    - nbformat >=5.2.0
     - python >=3.7
     - pyyaml
     - requests
