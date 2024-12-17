@@ -12,7 +12,7 @@ source:
   sha256: ddfd94093ce26e68b10c9546f596293e9bf7e13e2977ae7d4f0a8a3bd92ac95f
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - papermill = papermill.cli:papermill
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
@@ -20,7 +20,7 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
     - ansicolors
@@ -29,7 +29,7 @@ requirements:
     - entrypoints
     - nbclient >=0.2.0
     - nbformat >=5.2.0
-    - python >=3.7
+    - python >={{ python_min }}
     - pyyaml
     - requests
     - tenacity >=5.0.2
@@ -42,6 +42,7 @@ test:
     - papermill --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: http://github.com/nteract/papermill
