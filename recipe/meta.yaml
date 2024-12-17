@@ -22,6 +22,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - ansicolors
     - aiohttp >=3.9,<3.10
