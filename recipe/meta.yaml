@@ -24,7 +24,6 @@ requirements:
     - pip
     - setuptools
   run:
-    - ansicolors
     - aiohttp >=3.9
     - click
     - entrypoints
