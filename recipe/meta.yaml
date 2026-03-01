@@ -1,5 +1,5 @@
 {% set name = "papermill" %}
-{% set version = "2.6.0" %}
+{% set version = "2.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -9,10 +9,10 @@ source:
   # FIXME: Revert GitHub archive change when sdist is correctly packaged
   # url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   url: https://github.com/nteract/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: ddfd94093ce26e68b10c9546f596293e9bf7e13e2977ae7d4f0a8a3bd92ac95f
+  sha256: ec3d6ae68e56c1824497bb0155f97297842bd26e27e33df2eb62ddb1f67a021d
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - papermill = papermill.cli:papermill
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
@@ -24,7 +24,6 @@ requirements:
     - pip
     - setuptools
   run:
-    - ansicolors
     - aiohttp >=3.9
     - click
     - entrypoints
